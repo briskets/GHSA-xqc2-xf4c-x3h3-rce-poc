@@ -1,0 +1,15 @@
+services:
+  lab:
+    build:
+      context: ./lab
+    ports:
+      - "127.0.0.1:3100:3100"
+
+  lab-patched:
+    profiles: ["patched"]
+    build:
+      context: ./lab
+      args:
+        NEXT_VERSION: "16.4.1"
+    ports:
+      - "127.0.0.1:3101:3100"

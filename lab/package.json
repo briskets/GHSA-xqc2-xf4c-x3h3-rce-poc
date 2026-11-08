@@ -1,0 +1,13 @@
+{
+  "name": "ghsa-xqc2-lab",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "start": "next start -p 3100"
+  },
+  "dependencies": {
+    "next": "16.4.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  }
+}
