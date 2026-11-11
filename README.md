@@ -1,4 +1,4 @@
-# GHSA-xqc2-xf4c-x3h3 — React Server Components RCE PoC
+# CVE-2026-126187 GHSA-xqc2-xf4c-x3h3 — React Server Components RCE PoC
 
 > **Research exploit code.** This repository contains a working proof of concept
 > and an intentionally vulnerable Docker lab. Use it only against systems you
@@ -22,7 +22,7 @@ execution in React Server Components tracked as
 | **Fixed React** | `19.0.9`, `19.1.10`, `19.2.9`, `19.3.1` |
 | **Affected Next.js** | `>= 16.0.0, <= 16.4.0` (App Router + Cache Components) |
 | **Fixed Next.js** | `16.4.1` |
-| **CVE** | None assigned at time of writing |
+| **CVE** | CVE-2026-126187 |
 | **Prerequisite** | A `use cache` function that returns multiple typed arrays plus an attacker-controlled value |
 
 The React advisory describes the trigger as “extremely rare cases where
@@ -159,7 +159,7 @@ python3 poc.py <url> [options]
 
 ## Adapting to another app
 
-GHSA-xqc2 does not affect every Next.js app. The application must have a
+CVE-2026-126187 does not affect every Next.js app. The application must have a
 `use cache` function that returns multiple typed arrays in a way that triggers
 the serializer desync, and the cached page must be able to resolve a Server
 Action.
